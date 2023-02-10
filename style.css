@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap");
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.wrapper p {
+  font-size: 100px;
+  font-family: Bowlby One SC, sans-serif;
+  transform: scale(0.9, 1) rotatey(-10deg) translatey(0px);
+  animation: 2.2s scaling cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  text-shadow: 0 0 #e8332e, 0 0 #fc9e05, 0 0 #891696;
+  transform-origin: 50% 100%;
+  color: #fff;
+  position: relative;
+  top: 10%;
+  transform-style: preserve-3d;
+  margin-right: 4px;
+}
+.wrapper p:nth-child(1) {
+  animation-delay: 140ms;
+}
+.wrapper p:nth-child(2) {
+  animation-delay: 280ms;
+}
+.wrapper p:nth-child(3) {
+  animation-delay: 420ms;
+}
+.wrapper p:nth-child(4) {
+  animation-delay: 560ms;
+}
+.wrapper p:nth-child(5) {
+  animation-delay: 700ms;
+}
+
+@keyframes scaling {
+  20% {
+    text-shadow: 0px 0 #e8332e, 0px 0 #fc9e05, 0px 0 #891696;
+    transform: scale(0.9, 1) rotatey(-10deg);
+  }
+  40% {
+    transform: scale(0.9, 2) translatey(16px);
+    text-shadow: -10px 0px #e8332e, -20px 0 #fc9e05, -30px 0 #891696;
+  }
+  60% {
+    transform: scale(0.9, 1) rotatey(-5deg);
+    text-shadow: 0px 0 #e8332e, 0px 0 #fc9e05, 0px 0 #891696;
+  }
+  80% {
+    transform: scale(0.9, 2) translatey(16px);
+    text-shadow: 10px 0px #e8332e, 20px 0 #fc9e05, 30px 0 #891696;
+  }
+}
+@keyframes jump {
+  20% {
+    transform: translatey(0) scale(0);
+    opacity: 0;
+  }
+  40% {
+    transform: translatey(-50px) scale(1);
+    opacity: 1;
+  }
+  60% {
+    transform: translatey(0) scale(0);
+    opacity: 0;
+  }
+  80% {
+    transform: translatey(-50px) scale(1);
+    opacity: 1;
+  }
+}
+html {
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #f69294;
+}
+
+/* general styling */
+:root {
+  --smaller: .75;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+
+
+/* background-color: #ffd54f; */
+body {
+  align-items: center;
+  background-color: #000;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.container {
+  color: #fcfcfc;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.emoji {
+  display: none;
+  padding: 1rem;
+}
+
+.emoji span {
+  font-size: 4rem;
+  padding: 0 0.5rem;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+
+  li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
